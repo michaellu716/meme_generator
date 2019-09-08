@@ -1,1 +1,9 @@
 <h1>Welcome to my Awesome Web App</h1>
+<% @memes.each do |meme| %>
+    <div>
+      <h1><%= meme.top_text %></h1><br />
+      <i><%= meme.bottom_text %></i><br />
+    </div>
+  
+    <hr />
+  <% end %>
