@@ -3,4 +3,8 @@ class MemesController < ApplicationController
         @memes = Meme.all
     end
 
+    def new
+        @meme = Meme.new
+    end
+
 end

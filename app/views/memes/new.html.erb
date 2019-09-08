@@ -1,0 +1,9 @@
+<div class="booyah-box col-10 offset-1">
+  <h1>Enter Your Place Details</h1>
+  <%= simple_form_for @meme do |f| %>
+    <%= f.input :top_text %>
+    <%= f.input :bottom_text %>
+    <br />
+    <%= f.submit 'Create', class: 'btn btn-primary' %>
+  <% end %>
+</div>
