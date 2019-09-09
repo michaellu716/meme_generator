@@ -1,4 +1,6 @@
 class MemesController < ApplicationController
+    before_action :authenticate_user!, only: [:new, :create]
+
     def index
         @memes = Meme.all
     end
@@ -8,7 +10,7 @@ class MemesController < ApplicationController
     end
 
     def create
-        Meme.create(meme_params)
+        current_user.memes.create(meme_params)
         redirect_to root_path
     end
 

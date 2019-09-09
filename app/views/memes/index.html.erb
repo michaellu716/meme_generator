@@ -4,6 +4,8 @@
       <h1><%= meme.top_text %></h1><br />
       <i><%= meme.bottom_text %></i><br />
     </div>
-  
+    <% if meme.user.present? %>
+      <small><%= meme.user.email %></small>
+    <% end %>
     <hr />
   <% end %>
